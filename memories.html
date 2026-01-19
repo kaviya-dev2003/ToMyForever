@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To My Forever | Memories</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <nav>
+        <div class="container">
+            <ul class="nav-links flex">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="story.html">Our Story</a></li>
+                <li><a href="memories.html" class="active">Memories</a></li>
+                <li><a href="foryou.html">For You</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container section-padding">
+        <header class="page-header fade-in">
+            <h1 class="page-title">Captured Hearts</h1>
+            <p class="page-subtitle">Every picture whispers your name.</p>
+            <div class="heart-divider">
+                <i class="fas fa-heart"></i>
+            </div>
+        </header>
+
+        <div class="gallery-grid">
+            <div class="gallery-item large fade-in" style="animation-delay: 0.1s;">
+                <img src="https://images.unsplash.com/photo-1516589174184-c68526614488?auto=format&fit=crop&q=80&w=800"
+                    alt="Memory">
+                <div class="gallery-overlay">
+                    <p>"You are my greatest adventure."</p>
+                </div>
+            </div>
+            <div class="gallery-item fade-in" style="animation-delay: 0.2s;">
+                <img src="https://images.unsplash.com/photo-1522673607200-164883eeca48?auto=format&fit=crop&q=80&w=800"
+                    alt="Memory">
+                <div class="gallery-overlay">
+                    <p>"In your arms, I am home."</p>
+                </div>
+            </div>
+            <div class="gallery-item fade-in" style="animation-delay: 0.3s;">
+                <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&q=80&w=800"
+                    alt="Memory">
+                <div class="gallery-overlay">
+                    <p>"Love is the bridge."</p>
+                </div>
+            </div>
+            <div class="gallery-item glass-card fade-in" style="animation-delay: 0.4s;">
+                <div class="quote-content">
+                    <i class="fas fa-quote-left"></i>
+                    <p>I saw that you were perfect, and so I loved you. Then I saw that you were not perfect and I loved
+                        you even more.</p>
+                </div>
+            </div>
+            <div class="gallery-item wide fade-in" style="animation-delay: 0.5s;">
+                <img src="https://images.unsplash.com/photo-1518199266791-5375a83190b7?auto=format&fit=crop&q=80&w=800"
+                    alt="Memory">
+                <div class="gallery-overlay">
+                    <p>"To the moon and back."</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <style>
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-auto-rows: 250px;
+            gap: 20px;
+            padding: 20px 0;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: grayscale(100%);
+            transition: var(--transition-smooth);
+        }
+
+        .gallery-item:hover img {
+            filter: grayscale(0%);
+            transform: scale(1.05);
+        }
+
+        .large {
+            grid-row: span 2;
+        }
+
+        .wide {
+            grid-column: span 2;
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(30, 30, 30, 0.6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            opacity: 0;
+            transition: var(--transition-smooth);
+            text-align: center;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .gallery-overlay p {
+            font-family: var(--heading-font);
+            font-size: 1.5rem;
+            color: var(--secondary-color);
+            font-style: italic;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            text-align: center;
+            grid-column: span 1;
+        }
+
+        .quote-content i {
+            color: var(--accent-color);
+            margin-bottom: 20px;
+            font-size: 2rem;
+            display: block;
+        }
+
+        .quote-content p {
+            font-family: var(--heading-font);
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: var(--secondary-color);
+            opacity: 0.9;
+        }
+
+        @media (max-width: 768px) {
+            .gallery-grid {
+                grid-auto-rows: 200px;
+            }
+
+            .wide,
+            .large {
+                grid-column: span 1;
+                grid-row: span 1;
+            }
+        }
+    </style>
+</body>
+
+</html>
