@@ -1,100 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To My Forever | Home</title>
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="home.css">
 </head>
-<body>
-    <nav>
-        <div class="container">
-            <ul class="nav-links flex">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="story.html">Our Story</a></li>
-                <li><a href="memories.html">Memories</a></li>
-                <li><a href="foryou.html">For You</a></li>
-            </ul>
-        </div>
-    </nav>
 
+<body class="home-page">
     <header class="hero flex">
         <div class="hero-overlay"></div>
         <div class="container hero-content fade-in">
-            <h1 class="hero-title">In a world of chaos,<br>you are my calm.</h1>
+            <h1 class="hero-title">From the moment I saw you...</h1>
+            <p class="hero-subtitle">My world changed.</p>
+
             <div class="heart-divider">
                 <i class="fas fa-heart"></i>
             </div>
-            <a href="story.html" class="btn-gold">Read Our Story</a>
+            <!-- <div class="container"> -->
+            <section class="next-chapter-section fade-in">
+                <a href="story.html" class="btn-chapter">Our Story Begins →</a>
+            </section>
+            <!-- </div> -->
+
         </div>
-        
-        <div class="scroll-hint">
-            <span>Scroll</span>
+
+        <!-- <div class="scroll-hint">
+            <span>Scroll for our journey</span>
             <div class="hint-line"></div>
-        </div>
+        </div> -->
     </header>
 
-    <style>
-        .hero {
-            height: 100vh;
-            width: 100%;
-            background: url('https://images.unsplash.com/photo-1518621736915-f3b1c41bfd00?auto=format&fit=crop&q=80&w=2000') no-repeat center center;
-            background-size: cover;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-            text-align: center;
-        }
 
-        .hero-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(to bottom, rgba(30,30,30,0.4), rgba(30,30,30,0.8));
-        }
 
-        .hero-content {
-            position: relative;
-            z-index: 2;
-        }
-
-        .hero-title {
-            font-size: clamp(2rem, 8vw, 4.5rem);
-            margin-bottom: var(--spacing-md);
-            line-height: 1.1;
-        }
-
-        .scroll-hint {
-            position: absolute;
-            bottom: 30px;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 10px;
-            opacity: 0.6;
-            font-family: var(--accent-font);
-            font-size: 0.7rem;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-        }
-
-        .hint-line {
-            width: 1px;
-            height: 50px;
-            background: linear-gradient(to bottom, var(--accent-color), transparent);
-            animation: scrollLine 2s infinite;
-        }
-
-        @keyframes scrollLine {
-            0% { transform: translateY(-20px); opacity: 0; }
-            50% { opacity: 1; }
-            100% { transform: translateY(20px); opacity: 0; }
-        }
-    </style>
 </body>
+</body>
+
 </html>

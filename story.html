@@ -5,23 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To My Forever | Our Story</title>
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="story.css">
 </head>
 
-<body>
-    <nav>
-        <div class="container">
-            <ul class="nav-links flex">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="story.html" class="active">Our Story</a></li>
-                <li><a href="memories.html">Memories</a></li>
-                <li><a href="foryou.html">For You</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <main class="container section-padding">
+<body class="story-page">
+    <main class="screen-container">
         <header class="page-header fade-in">
             <h1 class="page-title">The Journey of Us</h1>
             <p class="page-subtitle">Every moment with you is a favor.</p>
@@ -32,181 +21,42 @@
 
         <section class="timeline">
             <div class="timeline-line"></div>
-
+            <!-- Timeline items remain the same -->
             <div class="timeline-item left fade-in">
                 <div class="timeline-dot"></div>
-                <div class="timeline-date">Jan 12, 2024</div>
+                <div class="timeline-date">The Beginning</div>
                 <div class="timeline-content">
-                    <h3>The Day I Noticed You</h3>
-                    <p>It wasn't a spark; it was a realization. The world just seemed to dial down Its noise whenever
-                        you were near.</p>
+                    <h3>First Meet</h3>
+                    <p>It wasn't just a meeting; it was the start of my favorite universe.</p>
                 </div>
             </div>
 
-            <div class="timeline-item right fade-in" style="animation-delay: 0.2s;">
+            <div class="timeline-item right fade-in" style="animation-delay: 0.3s;">
                 <div class="timeline-dot"></div>
-                <div class="timeline-date">Feb 14, 2024</div>
+                <div class="timeline-date">The Spark</div>
                 <div class="timeline-content">
-                    <h3>The First Smile</h3>
-                    <p>That one smile that changed my entire trajectory. I knew then that I'd spend the rest of my days
-                        trying to be the reason for it.</p>
+                    <h3>First Smile</h3>
+                    <p>That one smile that changed my entire trajectory.</p>
                 </div>
             </div>
 
-            <div class="timeline-item left fade-in" style="animation-delay: 0.4s;">
+            <div class="timeline-item left fade-in" style="animation-delay: 0.6s;">
                 <div class="timeline-dot"></div>
-                <div class="timeline-date">May 20, 2024</div>
+                <div class="timeline-date">Forever Found</div>
                 <div class="timeline-content">
-                    <h3>The Moment I Knew</h3>
-                    <p>Under the stars, in complete silence, I realized that 'forever' was no longer a long time—it was
-                        a destination I wanted to reach with you.</p>
+                    <h3>First Memory</h3>
+                    <p>I realized that 'forever' was no longer a long time.</p>
                 </div>
             </div>
         </section>
+
+        <section class="next-chapter-section fade-in">
+            <a href="gallery.html" class="btn-chapter">See Our Moments 📸</a>
+        </section>
     </main>
+</body>
 
-    <style>
-        .page-header {
-            text-align: center;
-            margin-bottom: var(--spacing-lg);
-        }
-
-        .page-title {
-            font-size: clamp(2.5rem, 5vw, 3.5rem);
-            color: var(--accent-color);
-        }
-
-        .page-subtitle {
-            font-family: var(--accent-font);
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            font-size: 0.8rem;
-            margin-top: 10px;
-            opacity: 0.6;
-        }
-
-        .timeline {
-            position: relative;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 40px 0;
-        }
-
-        .timeline-line {
-            position: absolute;
-            left: 50%;
-            top: 0;
-            bottom: 0;
-            width: 1px;
-            background: linear-gradient(to bottom, transparent, var(--accent-color), transparent);
-            transform: translateX(-50%);
-        }
-
-        .timeline-item {
-            width: 45%;
-            margin-bottom: 60px;
-            position: relative;
-            cursor: pointer;
-        }
-
-        .timeline-item.left {
-            float: left;
-            text-align: right;
-        }
-
-        .timeline-item.right {
-            float: right;
-            text-align: left;
-        }
-
-        .timeline::after {
-            content: '';
-            display: table;
-            clear: both;
-        }
-
-        .timeline-dot {
-            position: absolute;
-            top: 10px;
-            width: 12px;
-            height: 12px;
-            background: var(--accent-color);
-            border-radius: 50%;
-            z-index: 2;
-        }
-
-        .left .timeline-dot {
-            right: -5.5% - 6px;
-            left: calc(100% + 2.5% + 14px);
-        }
-
-        .right .timeline-dot {
-            left: -5.5% - 6px;
-            right: calc(100% + 2.5% + 14px);
-        }
-
-        /* Fix dot positioning with calc */
-        .left .timeline-dot {
-            right: -11.1%;
-            left: auto;
-        }
-
-        .right .timeline-dot {
-            left: -11.1%;
-            right: auto;
-        }
-
-        .timeline-date {
-            font-family: var(--accent-font);
-            color: var(--accent-color);
-            font-size: 0.8rem;
-            letter-spacing: 2px;
-            margin-bottom: 10px;
-        }
-
-        .timeline-content {
-            background: rgba(40, 40, 40, 0.4);
-            padding: 2.5rem;
-            border: 1px solid rgba(212, 175, 55, 0.1);
-            transition: var(--transition-smooth);
-            position: relative;
-        }
-
-        .timeline-content h3 {
-            margin-bottom: 15px;
-            font-size: 1.5rem;
-        }
-
-        .timeline-content p {
-            font-size: 0.95rem;
-            opacity: 0.8;
-            font-weight: 300;
-        }
-
-        .timeline-item:hover .timeline-content {
-            border-color: var(--accent-color);
-            background: rgba(40, 40, 40, 0.8);
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-        }
-
-        @media (max-width: 768px) {
-            .timeline-line {
-                left: 20px;
-            }
-
-            .timeline-item {
-                width: 90%;
-                float: left !important;
-                text-align: left !important;
-                padding-left: 50px;
-            }
-
-            .timeline-dot {
-                left: 14px !important;
-            }
-        }
-    </style>
+</body>
 </body>
 
 </html>
